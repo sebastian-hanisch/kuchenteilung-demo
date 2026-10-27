@@ -151,7 +151,7 @@ def selfridge_conway(vals, trace=None) -> list:
 
 def moving_knife(vals, trace=None) -> list:
     """Bewegliches Messer (Dubins–Spanier), beliebig viele Personen: das Messer wandert von links; wer zuerst ruft (das Stück links vom Messer ist ihr 1/n wert), bekommt es und scheidet aus; der Rest läuft weiter.
-    Die letzte Person bekommt den Rest. Proportional, ab drei Personen nicht neidfrei. `trace` bekommt je Ruf ("ruf", Person, x)."""
+    Die letzte Person bekommt den Rest. Proportional, ab drei Personen in der Regel nicht neidfrei. `trace` bekommt je Ruf ("ruf", Person, x)."""
     _check(vals)
     n, m = len(vals), len(vals[0])
     remaining = list(range(n))

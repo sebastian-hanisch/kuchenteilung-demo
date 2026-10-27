@@ -65,7 +65,7 @@ PRESETS = {
 }
 PRESET_HELP = {
     "Drei Teams, zwölf Stunden": "Voreinstellung: drei Teams mit zufälligen Vorlieben für zwölf Hallenstunden, bewegliches Messer.",
-    "Geteilt und gewählt verschenkt Wohlfahrt": "Team 1 schneidet bei 16 Uhr, Team 2 nimmt die linke Seite: neidfrei, aber die Stunden 14 bis 16 Uhr will Team 1 sehr und Team 2 gar nicht; ein Tausch brächte Team 1 25 Prozentpunkte mehr.",
+    "Geteilt und gewählt verschenkt Wohlfahrt": "Team 1 schneidet bei 16 Uhr, Team 2 nimmt die linke Seite: neidfrei, aber die Stunden 14 bis 16 Uhr will Team 1 sehr und Team 2 gar nicht; ein Übertrag dieser Stunden an Team 1 brächte Team 1 25 Prozentpunkte mehr, ohne dass Team 2 verliert.",
     "Selfridge–Conway mit Kürzung": "Team 2 kürzt das erste Drittel bei 10:40 Uhr, Team 3 wählt das zweite Stück; die Kürzung teilt Team 3. Am Ende beneidet niemand: die Nutzen sind 37,0, 38,9 und 42,2 %.",
     "Bewegliches Messer: Neid ab drei Teams": "Team 2 ruft zuerst (bei 12 Uhr, ein Drittel nach seiner Bewertung), Team 1 folgt bei 16 Uhr; das letzte Stück (16 bis 20 Uhr) wäre Team 1 die Hälfte wert gewesen, sein eigenes ist ihm nur ein Drittel wert: es beneidet Team 3.",
     "Neidfreiheit kostet etwas": "Zwei Teams mit fast gleichen Vorlieben: die höchste Wohlfahrt wäre nicht neidfrei, die beste neidfreie Verteilung verliert 4,2 % davon.",

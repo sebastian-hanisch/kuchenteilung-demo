@@ -71,7 +71,7 @@ Jedes Team gibt jeder der zwölf Stunden ein **Gewicht** von 0 bis 9; daraus wir
 1. **Geteilt und gewählt (2 Teams):** Team 1 schneidet so, dass beide Seiten für es gleich viel wert sind (je 50 %); Team 2 wählt die Seite, die es höher bewertet.
 2. **Selfridge–Conway (3 Teams):** Team 1 schneidet in drei gleich bewertete Stücke; Team 2 kürzt das von ihm am höchsten bewertete, bis es dem zweitbesten gleicht; Team 3 wählt, Team 2 bekommt das gekürzte, wenn Team 3 es nicht nimmt; die Kürzung teilt das Team, das das gekürzte Stück nicht hat, in drei gleiche Teile, und es wählen zuerst das Team mit dem gekürzten Stück, dann Team 1, zuletzt das teilende.
 3. **Bewegliches Messer (beliebig viele):** das Messer wandert von 8 Uhr nach rechts; wer zuerst ruft (das Stück links ist ihm 1/n wert), bekommt es und scheidet aus. Das letzte Team bekommt den Rest.
-4. **Referenzen (lineare Programme):** *Höchste Wohlfahrt*: jede Stunde an das Team mit dem höchsten Gewicht (nicht neidfrei). *Neidfrei, beste Wohlfahrt*: die größte Summe der Nutzen unter der Nebenbedingung „kein Neid“. *Nachgebessert*: die größte Summe der Nutzen, bei der kein Team schlechter dasteht als im Protokoll (und bei einem neidfreien Protokoll auch weiter kein Neid).
+4. **Referenzen (lineare Programme):** *Höchste Wohlfahrt*: jede Stunde an das Team mit dem höchsten Gewicht (nicht immer neidfrei). *Neidfrei, beste Wohlfahrt*: die größte Summe der Nutzen unter der Nebenbedingung „kein Neid“. *Nachgebessert*: die größte Summe der Nutzen, bei der kein Team schlechter dasteht als im Protokoll (und bei einem neidfreien Protokoll auch weiter kein Neid).
 5. **Gleichstand:** die kleinere Teamnummer. Die Protokolle rechnen mit Brüchen (keine Rundungsfehler), die linearen Programme mit HiGHS (Toleranz 10⁻⁷).
         """
     )
@@ -202,7 +202,7 @@ st.markdown(
 | **Bewertungen sind stückweise konstant und addieren sich** | Innerhalb einer Stunde ist jede Minute gleich viel wert; wer zusammenhängende Blöcke braucht (ein Spiel dauert 90 Minuten), hat keine additive Bewertung. | diese Demo (Zersplitterung) |
 | **Zeit ist beliebig teilbar** | Reale Zeitfenster haben Mindestlängen und Wechselzeiten; die Demo zählt nur die Blöcke. | – |
 | **Selfridge–Conway ist hier das Protokoll für genau drei Teams** | Für beliebig viele Teams gibt es neidfreie Protokolle (Aziz und Mackenzie, aus dem Gedächtnis) mit einer riesigen Zahl von Schritten; die Demo zeigt sie nicht. | – |
-| **Das bewegliche Messer ist nur proportional** | Ab drei Teams ist das Ergebnis fast nie neidfrei, weil das erste Team, das ruft, die beiden anderen Stücke zusammen mit 2/3 bewertet (Befund der Reihen). | diese Demo |
+| **Das bewegliche Messer ist nur proportional** | Ab drei Teams ist das Ergebnis fast nie neidfrei, weil das erste Team, das ruft, die übrigen Stücke zusammen mit (n−1)/n bewertet (bei drei Teams 2/3) und meist eines davon höher als 1/n (Befund der Reihen). | diese Demo |
 | **Die Referenzen sind Rechnungen, keine Protokolle** | Die höchste Wohlfahrt und die beste neidfreie Verteilung setzen voraus, dass jemand alle Bewertungen kennt und rechnet. | – |
 | **Modell, kein Befund über Hallenplanung** | Die Zahlen sagen, was die Rechnung für erzeugte oder eingegebene Bewertungen liefert, nicht, wie Vereine tatsächlich teilen sollten. | – |
 """

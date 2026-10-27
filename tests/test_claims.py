@@ -131,7 +131,7 @@ def test_blocks_per_team(blocks):
 
 
 def test_blocks_verdict_and_table(blocks):
-    assert ev.verdict_blocks(blocks)[1] == "Bei 5 Teams bekommt ein Team beim Messer im Mittel 1,0 Block, bei höchster Wohlfahrt 2,0, bei der besten neidfreien Verteilung 2,6 Blöcke: wer Effizienz will, zerlegt die Hallenzeit."
+    assert ev.verdict_blocks(blocks)[1] == "Bei 5 Teams bekommt ein Team beim Messer im Mittel 1,0 Block, bei höchster Wohlfahrt 2,0, bei der besten neidfreien Verteilung 2,6 Blöcke: wer Effizienz will, zerlegt die Hallenzeit (bei den LP-Verteilungen hängt die Zahl von der gewählten Lösung ab)."
     assert ev.block_table(blocks)[1] == {"Teams": 3, "Bewegliches Messer": "1,00", "Höchste Wohlfahrt": "2,89", "Neidfrei, beste Wohlfahrt": "3,16"}
 
 

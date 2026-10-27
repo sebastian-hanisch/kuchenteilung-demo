@@ -226,7 +226,7 @@ def verdict_blocks(rows):
     """Reihe 3: Zersplitterung. Rückgabe (st-Methode, Text)."""
     big = rows[-1]
     text = (f"Bei {big['n']} Teams bekommt ein Team beim Messer im Mittel {num(big['messer'], 1)} Block, bei höchster Wohlfahrt {num(big['wohlfahrt'], 1)}, "
-            f"bei der besten neidfreien Verteilung {num(big['neidfrei'], 1)} Blöcke: wer Effizienz will, zerlegt die Hallenzeit.")
+            f"bei der besten neidfreien Verteilung {num(big['neidfrei'], 1)} Blöcke: wer Effizienz will, zerlegt die Hallenzeit (bei den LP-Verteilungen hängt die Zahl von der gewählten Lösung ab).")
     return "info", text
 
 

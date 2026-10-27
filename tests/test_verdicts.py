@@ -167,7 +167,7 @@ def test_verdict_protocols():
 def test_verdict_blocks():
     rows = [{"n": 2, "runs": 10, "messer": 1.0, "wohlfahrt": 3.0, "neidfrei": 3.5}, {"n": 5, "runs": 10, "messer": 1.0, "wohlfahrt": 2.0, "neidfrei": 2.5}]
     kind, text = ev.verdict_blocks(rows)
-    assert kind == "info" and text == ("Bei 5 Teams bekommt ein Team beim Messer im Mittel 1,0 Block, bei höchster Wohlfahrt 2,0, bei der besten neidfreien Verteilung 2,5 Blöcke: wer Effizienz will, zerlegt die Hallenzeit.")
+    assert kind == "info" and text == ("Bei 5 Teams bekommt ein Team beim Messer im Mittel 1,0 Block, bei höchster Wohlfahrt 2,0, bei der besten neidfreien Verteilung 2,5 Blöcke: wer Effizienz will, zerlegt die Hallenzeit (bei den LP-Verteilungen hängt die Zahl von der gewählten Lösung ab).")
 
 
 def test_series_tables_format_the_rows():
