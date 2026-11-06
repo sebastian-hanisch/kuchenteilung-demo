@@ -64,6 +64,17 @@ Weiter unten: die **Kernfrage**, der Abschnitt **🔬 Feste Reihen** und der Exp
 """
 )
 
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/kuchenteilung-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Mehrere **Teams** teilen sich zwölf Stunden Hallenzeit, und jedes bewertet jede Stunde anders. Weil sich Zeit beliebig teilen lässt, heißt das Problem **Kuchenteilung**. Die Demo rechnet drei klassische Verfahren durch: **Geteilt und gewählt** für zwei Teams, **Selfridge–Conway** für drei und das **bewegliche Messer** für beliebig viele. Dann prüft sie, ob das Ergebnis **proportional** ist (jedes Team bekommt mindestens seinen fairen Anteil), **neidfrei** (kein Team will ein fremdes Stück lieber) und **effizient** (niemand kann besser gestellt werden, ohne dass ein anderes Team verliert). Zum Vergleich rechnet sie Verteilungen mit der höchsten Gesamtzufriedenheit und der besten neidfreien. **Alle Teams bewerten ehrlich, und die Bewertungen in den festen Reihen sind erzeugt, nicht gemessen.**
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/kuchenteilung-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
+
 with st.expander("So wird gerechnet", expanded=True):
     st.markdown(
         """
@@ -211,6 +222,23 @@ st.markdown(
 st.markdown("---")
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/kuchenteilung-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind $n$ Teams, die jede der zwölf Hallenstunden verschieden bewerten (stückweise konstant, additiv), und ein Teilungsprotokoll. Gesucht ist, ob die Verteilung proportional, neidfrei und Pareto-effizient ist, wie viel Wohlfahrt gegenüber der höchsten möglichen liegen bleibt und was Neidfreiheit kostet.
+
+| Symbol | Bedeutung |
+|---|---|
+| $n$, $m$ | Zahl der Teams; Länge des Kuchens in Stunden ($m = 12$) |
+| $w_{ij}$, $v_{ij}$ | Gewicht (0 bis 9) und Dichte, die Team $i$ der Stunde $j$ gibt |
+| $V_i(S)$ | Wert des Stücks $S$ für Team $i$ (der ganze Kuchen ist 1 wert) |
+| $x_{ij}$ | Anteil der Stunde $j$, den Team $i$ bekommt |
+| $u_i$ | Nutzen von Team $i$ im Protokoll (Untergrenze beim Nachbessern) |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/kuchenteilung-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Bewertung.** Der Kuchen ist $[0, m]$ mit $m = 12$ Stunden. Team $i$ hat die Dichte $v_{ij} = w_{ij} / \sum_j w_{ij}$ auf der Stunde $j$; der Wert eines Stücks $S$ ist $V_i(S) = \int_S v_i$, $V_i([0,m]) = 1$.
